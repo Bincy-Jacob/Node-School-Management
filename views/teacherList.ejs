@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <% include head.ejs %>
+  <body class="text-center">
+    <h1>Teacher Lists</h1>
+    <div class="ctr mt-5">
+      <table class="table w-75 text-center table-secondary table-striped">
+        <thead>
+          <tr>
+            <th>First_Name</th>
+            <th>Last_name</th>
+            <th>Qualification</th>
+            <th>Course Incharge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% data.forEach(item => { %>
+          <tr>
+            <td><%= item.first_name %></td>
+            <td><%= item.last_name %></td>
+            <td><%= item.qualification %></td>
+            <td><%= item.course_id.name %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

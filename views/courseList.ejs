@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <% include head.ejs %>
+  <body class="text-center">
+    <h1>Course Lists</h1>
+
+    <form method="get" action="/">
+      <div class="input-group mb-3 mt-5 w-75 mx-auto">
+        <input
+          type="text"
+          class="form-control"
+          name="searchValue"
+          placeholder="Search data ...."
+        />
+        <button class="btn btn-outline-secondary" type="submit">Search</button>
+      </div>
+    </form>
+
+    <div class="ctr mt-5">
+      <table class="table w-75 text-center table-danger table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Duration</th>
+            <th>Start_Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% data.forEach(item => { %>
+          <tr>
+            <td><%= item.name %></td>
+            <td><%= item.duration %></td>
+            <td><%= moment(item.start_date).format('LL') %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <% include head.ejs %>
+  <body>
+    <h1 class="mb-3">Add Teacher</h1>
+    <form method="post" action="/teacher" class="w-50">
+      <div class="mb-3">
+        <label class="form-label">First Name</label>
+        <input type="text" class="form-control" name="first_name" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Last Name</label>
+        <input type="text" class="form-control" name="last_name" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Qualification</label>
+        <input type="text" class="form-control" name="qualification" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Course Id</label>
+        <input type="text" class="form-control" name="course_id" />
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </body>
+</html>
